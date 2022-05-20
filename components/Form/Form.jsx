@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 const Form = () => {
-	const [directionsInput, setDirections] = useState("");
+	const [directionsInput, setDirectionsInput] = useState("");
 
 	async function submitHandler(e) {
 		e.preventDefault();
@@ -17,8 +17,9 @@ const Form = () => {
 			}),
 		});
 
-		const data = response.json();
+		const data = await response.json();
 		console.log(data.prompt, data.result);
+		setDirectionsInput("");
 	}
 
 	const changeHandler = (e) => {
@@ -30,7 +31,7 @@ const Form = () => {
 			<textarea
 				type="text"
 				placeholder="Create a sentence that consists of directions"
-				value={directions}
+				value={directionsInput}
 				onChange={changeHandler}
 			/>
 			<input type="submit" value="Generate directions" />
