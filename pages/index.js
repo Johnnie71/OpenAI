@@ -1,8 +1,11 @@
 import Head from "next/head";
 import Form from "../components/Form/Form";
 import styles from "../styles/Home.module.css";
+import { useState } from "react";
 
 export default function Home() {
+	const [directions, setDirections] = useState("");
+	const [list, setList] = useState([]);
 	return (
 		<div className={styles.container}>
 			<Head>
