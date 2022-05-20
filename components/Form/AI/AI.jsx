@@ -6,7 +6,7 @@ const AI = () => {
 
 	return (
 		<div>
-			<Form />
+			<Form directions={directions} setDirections={setDirections} />
 		</div>
 	);
 };
