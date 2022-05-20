@@ -9,9 +9,8 @@ const Form = () => {
 
 	return (
 		<form onSubmit={submitHandler}>
-			<input
-				type="text-area"
-				name="input"
+			<textarea
+				type="text"
 				placeholder="Create a sentence that consists of directions"
 				value={directions}
 				onChange={(e) => setDirections(e.target.value)}
