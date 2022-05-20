@@ -1,6 +1,7 @@
-import React from "react";
+import React, { useState } from "react";
 
 const Form = () => {
+	const [directions, setDirections] = useState("");
 	return (
 		<form onSubmit={null}>
 			<input
