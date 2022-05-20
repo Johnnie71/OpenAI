@@ -16,14 +16,13 @@ const Form = () => {
 				directions: directionsInput,
 			}),
 		});
-
 		const data = await response.json();
 		console.log(data.prompt, data.result);
-		setDirectionsInput("");
+		// setDirectionsInput("");
 	}
 
 	const changeHandler = (e) => {
-		setDirections(e.target.value);
+		setDirectionsInput(e.target.value);
 	};
 
 	return (
