@@ -3,6 +3,7 @@ import Form from "../Form";
 
 const AI = () => {
 	const [directions, setDirections] = useState("");
+	const [responses, setResponses] = useState([]);
 
 	return (
 		<div>
