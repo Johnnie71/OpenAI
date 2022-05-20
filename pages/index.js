@@ -1,5 +1,7 @@
 import Head from "next/head";
+import Form from "../components/Form/Form";
 import styles from "../styles/Home.module.css";
+import { useState } from "react";
 
 export default function Home() {
 	return (
@@ -12,6 +14,7 @@ export default function Home() {
 
 			<main className={styles.main}>
 				<h1 className={styles.title}>Fun With AI!</h1>
+				<Form />
 			</main>
 		</div>
 	);
