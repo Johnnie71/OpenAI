@@ -1,11 +1,28 @@
-const Form = ({ setDirections, directions }) => {
+import { useState } from "react";
+
+const Form = () => {
+	const [directionsInput, setDirections] = useState("");
+
 	async function submitHandler(e) {
 		e.preventDefault();
+
+		const response = await fetch("api/generate", {
+			method: "POST",
+			headers: {
+				"Content-Type": "application/json",
+			},
+			body: JSON.stringify({
+				prompt: directionsInput,
+				directions: directionsInput,
+			}),
+		});
+
+		const data = response.json();
+		console.log(data.prompt, data.result);
 	}
 
 	const changeHandler = (e) => {
-		let directions = e.target.value;
-		setDirections(directions);
+		setDirections(e.target.value);
 	};
 
 	return (
