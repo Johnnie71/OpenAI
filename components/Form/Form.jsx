@@ -4,7 +4,7 @@ const Form = () => {
 	return (
 		<form onSubmit={null}>
 			<input
-				type="text"
+				type="text-area"
 				name="input"
 				placeholder="Create a sentence that consists of directions"
 			/>
