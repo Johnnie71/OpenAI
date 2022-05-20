@@ -1,11 +1,12 @@
-import React, { useState } from "react";
-
-const Form = () => {
-	const [directions, setDirections] = useState("");
-
+const Form = ({ setDirections, directions }) => {
 	async function submitHandler(e) {
 		e.preventDefault();
 	}
+
+	const changeHandler = (e) => {
+		let directions = e.target.value;
+		setDirections(directions);
+	};
 
 	return (
 		<form onSubmit={submitHandler}>
@@ -13,7 +14,7 @@ const Form = () => {
 				type="text"
 				placeholder="Create a sentence that consists of directions"
 				value={directions}
-				onChange={(e) => setDirections(e.target.value)}
+				onChange={changeHandler}
 			/>
 			<input type="submit" value="Generate directions" />
 		</form>
