@@ -1,7 +1,8 @@
 import { useState } from "react";
 import Form from "../Form";
 import List from "../OutputList/List";
-import { Container, Heading, Flex } from "@chakra-ui/react";
+import { Container, Flex, Heading } from "@chakra-ui/react";
+import ThemeToggle from "../ThemeToggler/ThemeToggle";
 
 const AI = () => {
 	const [results, setResults] = useState([]);
@@ -15,7 +16,10 @@ const AI = () => {
 
 	return (
 		<Container maxW="container.xl">
-			<Heading>Fun with AI!</Heading>
+			<ThemeToggle />
+			<Flex align="center" justify="center">
+				<Heading>Fun with AI!</Heading>
+			</Flex>
 			<Form setResults={setResultsHandler} />
 			<List results={results} />
 		</Container>
