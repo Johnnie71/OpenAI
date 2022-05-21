@@ -1,9 +1,6 @@
 import { useState } from "react";
 import {
 	FormControl,
-	FormLabel,
-	FormErrorMessage,
-	FormHelperText,
 	Button,
 	Textarea,
 	Flex,
@@ -42,7 +39,7 @@ const Form = ({ setResults }) => {
 			<Box p={2}>
 				<Box my={4}>
 					<form onSubmit={submitHandler}>
-						<FormControl>
+						<FormControl isRequired>
 							<Textarea
 								placeholder="Create a sentence that consists of directions"
 								value={directionsInput}
