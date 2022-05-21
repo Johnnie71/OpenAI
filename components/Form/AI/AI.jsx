@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Form from "../Form";
 import List from "../OutputList/List";
+import { Container } from "@chakra-ui/react";
 
 const AI = () => {
 	const [results, setResults] = useState([]);
@@ -13,10 +14,10 @@ const AI = () => {
 	};
 
 	return (
-		<div>
+		<Container w="80%" borderWidth="2px" borderColor="red">
 			<Form setResults={setResultsHandler} />
 			<List results={results} />
-		</div>
+		</Container>
 	);
 };
 
