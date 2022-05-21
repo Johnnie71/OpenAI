@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-const Form = () => {
+const Form = ({ setResults }) => {
 	const [directionsInput, setDirectionsInput] = useState("");
 
 	async function submitHandler(e) {
@@ -17,8 +17,9 @@ const Form = () => {
 			}),
 		});
 		const data = await response.json();
-		console.log(data.prompt, data.result);
-		// setDirectionsInput("");
+		// console.log(data.prompt, data.result);
+		setResults(data);
+		setDirectionsInput("");
 	}
 
 	const changeHandler = (e) => {
