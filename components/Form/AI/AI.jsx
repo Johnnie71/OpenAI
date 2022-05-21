@@ -6,8 +6,7 @@ const AI = () => {
 	const [results, setResults] = useState([]);
 
 	const setResultsHandler = (data) => {
-		let result = { prompt: `${data.prompt}`, result: `${data.result}` };
-		// let newResults = [result, ...results];
+		let result = { prompt: data.prompt, result: data.result };
 		setResults((currentResults) => {
 			return [result, ...currentResults];
 		});
