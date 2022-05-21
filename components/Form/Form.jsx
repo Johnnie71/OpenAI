@@ -48,16 +48,20 @@ const Form = ({ setResults }) => {
 			<Box p={2}>
 				<Box my={4}>
 					<form onSubmit={submitHandler}>
+						<FormErrorMessage color="red">
+							Something went wrong!
+						</FormErrorMessage>
 						<FormControl isRequired>
-							<FormErrorMessage color="red">{error}</FormErrorMessage>
 							<Textarea
 								placeholder="Create a sentence that consists of directions"
 								value={directionsInput}
 								onChange={changeHandler}
-								size="lg"
+								w="container.sm"
+								h="2xs"
+								resize="both"
 							/>
 						</FormControl>
-						<Button width="full" mt={4} type="submit">
+						<Button width="auto" mt={4} type="submit">
 							{isLoading ? (
 								<CircularProgress isIndeterminate size="24px" color="teal" />
 							) : (
