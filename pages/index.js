@@ -1,5 +1,7 @@
 import Head from "next/head";
 import AI from "../components/Form/AI/AI";
+import { ColorModeScript } from "@chakra-ui/react";
+import theme from "../lib/theme";
 
 export default function Home() {
 	return (
@@ -11,6 +13,7 @@ export default function Home() {
 			</Head>
 
 			<main>
+				<ColorModeScript initialColorMode={theme.config.initialColorMode} />
 				<AI />
 			</main>
 		</div>
