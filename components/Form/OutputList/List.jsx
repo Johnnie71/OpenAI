@@ -2,7 +2,7 @@ import { Box, Grid, GridItem, Flex, useColorModeValue } from "@chakra-ui/react";
 
 const List = ({ results }) => {
 	const colorTheme = useColorModeValue("peachpuff", "#DEB6AB");
-	const whiteBlack = useColorModeValue("black", "white");
+
 	const tests = [
 		{
 			prompt:
