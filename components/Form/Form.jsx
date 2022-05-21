@@ -5,7 +5,7 @@ import {
 	FormErrorMessage,
 	FormHelperText,
 	Button,
-	Input,
+	Textarea,
 	Flex,
 	Box,
 	Heading,
@@ -38,15 +38,25 @@ const Form = ({ setResults }) => {
 	};
 
 	return (
-		<form onSubmit={submitHandler}>
-			<textarea
-				type="text"
-				placeholder="Create a sentence that consists of directions"
-				value={directionsInput}
-				onChange={changeHandler}
-			/>
-			<input type="submit" value="Generate directions" />
-		</form>
+		<Flex w="full" align="center" justifyContent="center">
+			<Box p={2}>
+				<Box my={4}>
+					<form onSubmit={submitHandler}>
+						<FormControl>
+							<Textarea
+								placeholder="Create a sentence that consists of directions"
+								value={directionsInput}
+								onChange={changeHandler}
+								size="lg"
+							/>
+						</FormControl>
+						<Button width="full" mt={4} type="submit">
+							Generate
+						</Button>
+					</form>
+				</Box>
+			</Box>
+		</Flex>
 	);
 };
 
