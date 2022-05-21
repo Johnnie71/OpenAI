@@ -45,7 +45,7 @@ const Form = ({ setResults }) => {
 	};
 
 	return (
-		<Flex mt={20} w="100%" align="center" justifyContent="center">
+		<Flex mt={15} w="100%" align="center" justifyContent="center">
 			<Box p={2}>
 				<Box my={4}>
 					<form onSubmit={submitHandler}>
