@@ -4,6 +4,11 @@ import {
 	FormLabel,
 	FormErrorMessage,
 	FormHelperText,
+	Button,
+	Input,
+	Flex,
+	Box,
+	Heading,
 } from "@chakra-ui/react";
 
 const Form = ({ setResults }) => {
