@@ -1,5 +1,6 @@
 import { useState } from "react";
 import Form from "../Form";
+import List from "../OutputList/List";
 
 const AI = () => {
 	const [results, setResults] = useState([]);
@@ -17,6 +18,7 @@ const AI = () => {
 	return (
 		<div>
 			<Form setResults={setResultsHandler} />
+			<List results={results} />
 		</div>
 	);
 };
