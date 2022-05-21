@@ -1,6 +1,7 @@
-import { Box, Grid, GridItem, Flex } from "@chakra-ui/react";
+import { Box, Grid, GridItem, Flex, useColorModeValue } from "@chakra-ui/react";
 
 const List = ({ results }) => {
+	const colorTheme = useColorModeValue("peachpuff", "#202023");
 	const tests = [
 		{
 			prompt:
@@ -18,7 +19,7 @@ const List = ({ results }) => {
 						shadow="lg"
 						borderRadius="10px"
 						width="100%"
-						bg="peachpuff"
+						bg={colorTheme}
 						key={idx}
 					>
 						<Flex>
