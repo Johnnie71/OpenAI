@@ -10,8 +10,6 @@ const AI = () => {
 		setResults((currentResults) => {
 			return [result, ...currentResults];
 		});
-		console.log("result", result);
-		console.log("Results List", results);
 	};
 
 	return (
