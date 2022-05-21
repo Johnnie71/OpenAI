@@ -38,7 +38,7 @@ const Form = ({ setResults }) => {
 	};
 
 	return (
-		<Flex w="full" align="center" justifyContent="center">
+		<Flex w="100%" align="center" justifyContent="center">
 			<Box p={2}>
 				<Box my={4}>
 					<form onSubmit={submitHandler}>
@@ -51,7 +51,7 @@ const Form = ({ setResults }) => {
 							/>
 						</FormControl>
 						<Button width="full" mt={4} type="submit">
-							Generate
+							Submit
 						</Button>
 					</form>
 				</Box>
