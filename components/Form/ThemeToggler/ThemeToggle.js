@@ -9,6 +9,7 @@ const ThemeToggle = () => {
 			aria-label="Toggle Theme"
 			icon={useColorModeValue(<MoonIcon />, <SunIcon />)}
 			onClick={toggleColorMode}
+			variant="ghost"
 		></IconButton>
 	);
 };
