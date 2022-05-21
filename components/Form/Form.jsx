@@ -45,7 +45,7 @@ const Form = ({ setResults }) => {
 	};
 
 	return (
-		<Flex w="100%" align="center" justifyContent="center">
+		<Flex mt={20} w="100%" align="center" justifyContent="center">
 			<Box p={2}>
 				<Box my={4}>
 					<form onSubmit={submitHandler}>
@@ -60,7 +60,14 @@ const Form = ({ setResults }) => {
 								resize="both"
 							/>
 						</FormControl>
-						<Button color="blue" width="auto" mt={4} type="submit">
+						<Button
+							bgColor="teal.200"
+							variant="outline"
+							shadow="base"
+							width="auto"
+							mt={4}
+							type="submit"
+						>
 							{isLoading ? (
 								<CircularProgress isIndeterminate size="24px" color="teal" />
 							) : (
