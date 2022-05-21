@@ -18,7 +18,7 @@ const Form = ({ setResults }) => {
 		e.preventDefault();
 		setIsLoading(true);
 		try {
-			const response = await fetch("api/generate", {
+			const response = await fetch("apenerate", {
 				method: "POST",
 				headers: {
 					"Content-Type": "application/json",
