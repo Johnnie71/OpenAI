@@ -14,7 +14,7 @@ const AI = () => {
 	};
 
 	return (
-		<Container w="80%" borderWidth="2px" borderColor="red">
+		<Container w="90%" borderWidth="2px" borderColor="red">
 			<Form setResults={setResultsHandler} />
 			<List results={results} />
 		</Container>

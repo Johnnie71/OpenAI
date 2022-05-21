@@ -1,10 +1,10 @@
 import Head from "next/head";
 import AI from "../components/Form/AI/AI";
-import styles from "../styles/Home.module.css";
+// import styles from "../styles/Home.module.css";
 
 export default function Home() {
 	return (
-		<div className={styles.container}>
+		<div>
 			<Head>
 				<title>Fun with AI</title>
 				<meta name="description" content="OpenAI" />
