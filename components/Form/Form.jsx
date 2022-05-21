@@ -40,6 +40,7 @@ const Form = ({ setResults }) => {
 	}
 
 	const changeHandler = (e) => {
+		setError("");
 		setDirectionsInput(e.target.value);
 	};
 
@@ -48,10 +49,8 @@ const Form = ({ setResults }) => {
 			<Box p={2}>
 				<Box my={4}>
 					<form onSubmit={submitHandler}>
-						<FormErrorMessage color="red">
-							Something went wrong!
-						</FormErrorMessage>
-						<FormControl isRequired>
+						<FormControl isRequired isInvalid={error}>
+							<FormErrorMessage color="red">{error}</FormErrorMessage>
 							<Textarea
 								placeholder="Create a sentence that consists of directions"
 								value={directionsInput}
@@ -61,7 +60,7 @@ const Form = ({ setResults }) => {
 								resize="both"
 							/>
 						</FormControl>
-						<Button width="auto" mt={4} type="submit">
+						<Button color="blue" width="auto" mt={4} type="submit">
 							{isLoading ? (
 								<CircularProgress isIndeterminate size="24px" color="teal" />
 							) : (
