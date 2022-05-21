@@ -14,11 +14,14 @@ async function aiRequest(req, res) {
 		frequency_penalty: 0.0,
 		presence_penalty: 0.0,
 	});
-	console.log(completion.data);
+	// console.log(req.body.prompt, completion.data);
+	res
+		.status(200)
+		.json({ prompt: req.body.prompt, result: completion.data.choices[0].text });
 }
 
 function generatePrompt(directions) {
-	return `Create a numbered list of turn-by-turn directions from this text: \n\n${directions}`;
+	return `Create a numbered list of turn-by-turn directions from this text: ${directions}`;
 }
 
 export default aiRequest;
