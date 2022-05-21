@@ -3,6 +3,7 @@ import { FormControl, Button, Textarea, Flex, Box } from "@chakra-ui/react";
 
 const Form = ({ setResults }) => {
 	const [directionsInput, setDirectionsInput] = useState("");
+	const [loading, setIsLoading] = useState(false);
 
 	async function submitHandler(e) {
 		e.preventDefault();
