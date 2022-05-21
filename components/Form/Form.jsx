@@ -7,12 +7,14 @@ import {
 	Box,
 	FormErrorMessage,
 	CircularProgress,
+	useColorModeValue,
 } from "@chakra-ui/react";
 
 const Form = ({ setResults }) => {
 	const [directionsInput, setDirectionsInput] = useState("");
 	const [isLoading, setIsLoading] = useState(false);
 	const [error, setError] = useState("");
+	const colorTheme = useColorModeValue("teal.200", "darkOrchard");
 
 	async function submitHandler(e) {
 		e.preventDefault();
@@ -61,7 +63,7 @@ const Form = ({ setResults }) => {
 							/>
 						</FormControl>
 						<Button
-							bgColor="teal.200"
+							bgColor={colorTheme}
 							variant="outline"
 							shadow="base"
 							width="auto"
