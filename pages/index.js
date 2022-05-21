@@ -11,8 +11,7 @@ export default function Home() {
 				<link rel="icon" href="/favicon.ico" />
 			</Head>
 
-			<main className={styles.main}>
-				<h1 className={styles.title}>Fun With AI!</h1>
+			<main>
 				<AI />
 			</main>
 		</div>
