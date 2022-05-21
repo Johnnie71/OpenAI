@@ -14,7 +14,13 @@ const List = ({ results }) => {
 		<Flex maxW="full" align="center" justify="center">
 			<Grid w="50%" autoColumns gap={5}>
 				{tests.map((result, idx) => (
-					<Box borderRadius="10px" width="100%" bg="peachpuff" key={idx}>
+					<Box
+						shadow="lg"
+						borderRadius="10px"
+						width="100%"
+						bg="peachpuff"
+						key={idx}
+					>
 						<Flex>
 							<GridItem p={5}>Prompt:</GridItem>
 							<GridItem ml={20} p={5}>
