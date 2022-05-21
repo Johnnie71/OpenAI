@@ -18,7 +18,7 @@ const Form = ({ setResults }) => {
 		e.preventDefault();
 		setIsLoading(true);
 		try {
-			const response = await fetch("api/genera", {
+			const response = await fetch("api/generate", {
 				method: "POST",
 				headers: {
 					"Content-Type": "application/json",
@@ -49,7 +49,7 @@ const Form = ({ setResults }) => {
 				<Box my={4}>
 					<form onSubmit={submitHandler}>
 						<FormControl isRequired>
-							{error && <FormErrorMessage>{error}</FormErrorMessage>}
+							<FormErrorMessage color="red">{error}</FormErrorMessage>
 							<Textarea
 								placeholder="Create a sentence that consists of directions"
 								value={directionsInput}
