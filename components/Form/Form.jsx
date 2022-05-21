@@ -40,7 +40,7 @@ const Form = ({ setResults }) => {
 	}
 
 	const changeHandler = (e) => {
-		setError("");
+		if (error.length) setError("");
 		setDirectionsInput(e.target.value);
 	};
 
