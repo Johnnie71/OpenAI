@@ -1,12 +1,5 @@
 import { useState } from "react";
-import {
-	FormControl,
-	Button,
-	Textarea,
-	Flex,
-	Box,
-	Heading,
-} from "@chakra-ui/react";
+import { FormControl, Button, Textarea, Flex, Box } from "@chakra-ui/react";
 
 const Form = ({ setResults }) => {
 	const [directionsInput, setDirectionsInput] = useState("");
