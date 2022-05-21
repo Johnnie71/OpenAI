@@ -1,7 +1,8 @@
 import { Box, Grid, GridItem, Flex, useColorModeValue } from "@chakra-ui/react";
 
 const List = ({ results }) => {
-	const colorTheme = useColorModeValue("peachpuff", "#202023");
+	const colorTheme = useColorModeValue("peachpuff", "#DEB6AB");
+	const whiteBlack = useColorModeValue("black", "white");
 	const tests = [
 		{
 			prompt:
@@ -16,19 +17,19 @@ const List = ({ results }) => {
 			<Grid w="50%" autoColumns gap={5}>
 				{tests.map((result, idx) => (
 					<Box
-						shadow="lg"
+						boxShadow="xl"
 						borderRadius="10px"
 						width="100%"
 						bg={colorTheme}
 						key={idx}
 					>
-						<Flex>
+						<Flex color="black">
 							<GridItem p={5}>Prompt:</GridItem>
 							<GridItem ml={20} p={5}>
 								{result.prompt}
 							</GridItem>
 						</Flex>
-						<Flex>
+						<Flex color="black">
 							<GridItem p={5}>Response:</GridItem>
 							<GridItem ml={16} p={5}>
 								{result.response}
