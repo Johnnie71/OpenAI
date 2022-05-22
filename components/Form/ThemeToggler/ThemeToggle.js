@@ -10,8 +10,9 @@ const ThemeToggle = () => {
 	const { toggleColorMode } = useColorMode();
 
 	return (
-		<Box flex={1} align="right">
+		<Box mr={10} flex={1} align="right">
 			<IconButton
+				position="fixed"
 				aria-label="Toggle Theme"
 				icon={useColorModeValue(<MoonIcon />, <SunIcon />)}
 				onClick={toggleColorMode}
