@@ -9,6 +9,9 @@ const List = ({ results }) => {
 				{results.length > 0
 					? results.map((item, idx) => {
 							const { prompt, result } = item;
+							const startIdx = result.indexOf("1");
+							const newResult = result.slice(startIdx);
+
 							return (
 								<Box
 									boxShadow="xl"
@@ -26,7 +29,7 @@ const List = ({ results }) => {
 									<Flex color="black">
 										<GridItem p={5}>Response:</GridItem>
 										<GridItem ml={16} p={5}>
-											{result}
+											{newResult}
 										</GridItem>
 									</Flex>
 								</Box>
