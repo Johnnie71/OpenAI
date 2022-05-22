@@ -19,6 +19,7 @@ const AI = () => {
 	// (store) setting results in local storage upon page load and state update
 	useEffect(() => {
 		// only store the state if the results exists and the length is greater than 0
+		// prevents state being refreshed to an empty array
 		if (results?.length) {
 			window.localStorage.setItem("results", JSON.stringify(results));
 		}
