@@ -1,4 +1,4 @@
-### AI Directions!
+## AI Directions!
 
 Created an [https://open-2oo11obrf-johnnie71.vercel.app/](AI form) that on submit makes an API call to [https://beta.openai.com/overview](OpenAI). Then displays both the prompt of the input and the results under the field in order of most recent. Input directions you might give someone and the results will show as steps of numbered directions!
 
