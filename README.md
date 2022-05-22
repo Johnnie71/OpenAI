@@ -1,11 +1,11 @@
 ## AI Directions!
 
-Created an [https://open-2oo11obrf-johnnie71.vercel.app/](AI form) that on submit makes an API call to [https://beta.openai.com/overview](OpenAI). Then displays both the prompt of the input and the results under the field in order of most recent. Input directions you might give someone and the results will show as steps of numbered directions!
+Created an [AI Form](https://open-2oo11obrf-johnnie71.vercel.app/) that on submit makes an API call to [OpenAI](https://beta.openai.com/overview). Then displays both the prompt of the input and the results under the field in order of most recent. Input directions you might give someone and the results will show as steps of numbered directions!
 
 ## Technologies Used
 
-- [https://nextjs.org/](Nextjs)
-- [https://chakra-ui.com/](Chakra UI)
+- [Nextjs](https://nextjs.org/)
+- [OpenAI](https://chakra-ui.com/)
 
 ## Features
 
