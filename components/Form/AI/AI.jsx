@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect } from "react";
 import Form from "../Form";
 import List from "../OutputList/List";
 import { Container, Flex, Heading } from "@chakra-ui/react";
