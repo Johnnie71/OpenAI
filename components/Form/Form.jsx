@@ -42,6 +42,7 @@ const Form = ({ setResults }) => {
 	}
 
 	const changeHandler = (e) => {
+		// if there is an error during input clear it
 		if (error.length) setError("");
 		setDirectionsInput(e.target.value);
 	};
