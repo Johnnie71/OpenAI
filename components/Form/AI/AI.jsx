@@ -34,7 +34,7 @@ const AI = () => {
 		<Container maxW="container.xl">
 			<ThemeToggle />
 			<Flex align="center" justify="center">
-				<Heading>AI Directions!</Heading>
+				<Heading className="header">AI Directions</Heading>
 			</Flex>
 			<Form setResults={setResultsHandler} />
 			<List results={results} />
