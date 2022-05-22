@@ -7,7 +7,7 @@ export default function Home() {
 	return (
 		<div>
 			<Head>
-				<title>Fun with AI</title>
+				<title>AI Directions</title>
 				<meta name="description" content="OpenAI" />
 				<link rel="icon" href="/favicon.ico" />
 			</Head>
