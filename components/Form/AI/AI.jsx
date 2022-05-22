@@ -9,6 +9,7 @@ const AI = () => {
 
 	// on refresh gets the local storage item and sets the state
 	useEffect(() => {
+		// checking to see if there is a key in the storage
 		const items = JSON.parse(window.localStorage.getItem("results"));
 		if (items) {
 			setResults(items);
@@ -17,7 +18,10 @@ const AI = () => {
 
 	// setting results in local storage upon page load and state update
 	useEffect(() => {
-		window.localStorage.setItem("results", JSON.stringify(results));
+		// only store the state if the results exists and the length is greater than 0
+		if (results?.length) {
+			window.localStorage.setItem("results", JSON.stringify(results));
+		}
 	}, [results]);
 
 	const setResultsHandler = (data) => {
