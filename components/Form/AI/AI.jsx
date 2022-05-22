@@ -8,13 +8,11 @@ const AI = () => {
 	let savedResults = useRef();
 
 	const [results, setResults] = useState(() => {
-		// get results from local storage
-		// const savedResults = localStorage.getItem("results");
-
-		// if there are results stored
+		// if there are results stored in localStorage
 		if (savedResults) {
+			console.log(savedResults);
 			// return the parsed JSON object back to a javascript object
-			return JSON.parse(savedResults);
+			return savedResults;
 		} else {
 			// return an empty array
 			return [];
