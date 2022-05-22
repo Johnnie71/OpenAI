@@ -5,35 +5,34 @@ import { Container, Flex, Heading } from "@chakra-ui/react";
 import ThemeToggle from "../ThemeToggler/ThemeToggle";
 
 const AI = () => {
-	// let savedResults = useRef();
-	const [results, setResults] = useState([]);
-	// const [results, setResults] = useState(() => {
-	// if there are results stored in localStorage
-	// if (savedResults) {
-	// return the parsed JSON object back to a javascript object
-	// 	return savedResults;
-	// } else {
-	// return an empty array
-	// 		return [];
-	// 	}
-	// });
+	let savedResults = useRef();
+	// const [results, setResults] = useState([]);
 
-	// useEffect(() => {
-	// 	let resultsInStorage = localStorage.getItem("results");
+	const [results, setResults] = useState(() => {
+		// if there are results stored in localStorage
+		if (savedResults) {
+			console.log(savedResults);
+			// return the parsed JSON object back to a javascript object
+			return savedResults;
+		} else {
+			// return an empty array
+			return [];
+		}
+	});
 
-	// 	if (resultsInStorage) {
-	// 		savedResults.current = resultsInStorage;
-	// 	} else {
-	// 		localStorage.setItem("results", JSON.stringify(results));
-	// 	}
-	// }, [results]);
+	useEffect(() => {
+		let resultsInStorage = localStorage.getItem("results");
+
+		if (resultsInStorage) {
+			savedResults.current = resultsInStorage;
+		} else {
+			localStorage.setItem("results", JSON.stringify(results));
+		}
+	}, [results]);
 
 	const setResultsHandler = (data) => {
-		console.log("DATA: ", data);
 		let result = { prompt: data.prompt, result: data.result };
-		setResults((currentResults) => {
-			return [result, ...currentResults];
-		});
+		setResults([result, ...results]);
 	};
 
 	return (
