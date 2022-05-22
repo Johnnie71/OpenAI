@@ -34,5 +34,6 @@ a {
 	background-clip: border-box;
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
+	animation: normal;
 	-webkit-animation: hue 10s infinite linear;
 }
