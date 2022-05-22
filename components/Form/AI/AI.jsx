@@ -19,9 +19,9 @@ const AI = () => {
 		}
 	});
 
-	// useEffect(() => {
-	// 	// localStorage.setItem("results", results);
-	// }, [results]);
+	useEffect(() => {
+		localStorage.setItem("results", JSON.stringify(results));
+	}, [results]);
 
 	const setResultsHandler = (data) => {
 		let result = { prompt: data.prompt, result: data.result };
