@@ -15,6 +15,7 @@ const Form = ({ setResults }) => {
 	const [isLoading, setIsLoading] = useState(false);
 	const [error, setError] = useState("");
 	const colorTheme = useColorModeValue("teal.200", "darkOrchard");
+	const blackWhite = useColorModeValue("black", "white");
 
 	async function submitHandler(e) {
 		e.preventDefault();
@@ -55,7 +56,8 @@ const Form = ({ setResults }) => {
 						<FormControl isRequired isInvalid={error}>
 							<FormErrorMessage color="red">{error}</FormErrorMessage>
 							<Textarea
-								placeholder="Create a sentence that consists of directions"
+								borderColor={blackWhite}
+								placeholder="Type in directions."
 								value={directionsInput}
 								onChange={changeHandler}
 								w="container.sm"
