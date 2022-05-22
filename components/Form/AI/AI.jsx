@@ -5,7 +5,19 @@ import { Container, Flex, Heading } from "@chakra-ui/react";
 import ThemeToggle from "../ThemeToggler/ThemeToggle";
 
 const AI = () => {
-	const [results, setResults] = useState([]);
+	const [results, setResults] = useState(() => {
+		// get results from local storage
+		const savedResults = localStorage.getItem("results");
+
+		// if there are results stored
+		if (savedResults) {
+			// return the parsed JSON object back to a javascript object
+			return JSON.parse(savedResults);
+		} else {
+			// return an empty array
+			return [];
+		}
+	});
 
 	// useEffect(() => {
 	// 	// localStorage.setItem("results", results);
