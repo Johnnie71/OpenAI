@@ -1,13 +1,15 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import Form from "../Form";
 import List from "../OutputList/List";
 import { Container, Flex, Heading } from "@chakra-ui/react";
 import ThemeToggle from "../ThemeToggler/ThemeToggle";
 
 const AI = () => {
+	let savedResults = useRef();
+
 	const [results, setResults] = useState(() => {
 		// get results from local storage
-		const savedResults = localStorage.getItem("results");
+		// const savedResults = localStorage.getItem("results");
 
 		// if there are results stored
 		if (savedResults) {
@@ -20,7 +22,13 @@ const AI = () => {
 	});
 
 	useEffect(() => {
-		localStorage.setItem("results", JSON.stringify(results));
+		let resultsInStorage = localStorage.getItem("results");
+
+		if (resultsInStorage) {
+			savedResults.current = resultsInStorage;
+		} else {
+			localStorage.setItem("results", JSON.stringify(results));
+		}
 	}, [results]);
 
 	const setResultsHandler = (data) => {
