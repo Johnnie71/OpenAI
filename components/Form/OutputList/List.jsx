@@ -15,28 +15,30 @@ const List = ({ results }) => {
 	return (
 		<Flex maxW="full" align="center" justify="center">
 			<Grid w="50%" autoColumns gap={5}>
-				{results.map((result, idx) => (
-					<Box
-						boxShadow="xl"
-						borderRadius="10px"
-						width="100%"
-						bg={colorTheme}
-						key={idx}
-					>
-						<Flex color="black">
-							<GridItem p={5}>Prompt:</GridItem>
-							<GridItem ml={20} p={5}>
-								{result.prompt}
-							</GridItem>
-						</Flex>
-						<Flex color="black">
-							<GridItem p={5}>Response:</GridItem>
-							<GridItem ml={16} p={5}>
-								{result.response}
-							</GridItem>
-						</Flex>
-					</Box>
-				))}
+				{results.length > 0
+					? results.map((result, idx) => (
+							<Box
+								boxShadow="xl"
+								borderRadius="10px"
+								width="100%"
+								bg={colorTheme}
+								key={idx}
+							>
+								<Flex color="black">
+									<GridItem p={5}>Prompt:</GridItem>
+									<GridItem ml={20} p={5}>
+										{result.prompt}
+									</GridItem>
+								</Flex>
+								<Flex color="black">
+									<GridItem p={5}>Response:</GridItem>
+									<GridItem ml={16} p={5}>
+										{result.response}
+									</GridItem>
+								</Flex>
+							</Box>
+					  ))
+					: null}
 			</Grid>
 		</Flex>
 	);
