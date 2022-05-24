@@ -31,12 +31,7 @@ const AI = () => {
 	};
 
 	return (
-		<Container
-			borderWidth="2px"
-			borderColor="red"
-			minW="fit-content"
-			maxW="container.xl"
-		>
+		<Container minW="fit-content" maxW="container.xl">
 			<ThemeToggle />
 			<Flex align="center" justify="center">
 				<Heading fontFamily="Roboto Mono, monospace" mt={20} className="header">
