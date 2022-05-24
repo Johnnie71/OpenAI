@@ -34,7 +34,7 @@ const AI = () => {
 		<Container maxW="container.xl">
 			<ThemeToggle />
 			<Flex align="center" justify="center">
-				<Heading mt={20} className="header">
+				<Heading fontFamily="Roboto Mono, monospace" mt={20} className="header">
 					AI Directions
 				</Heading>
 			</Flex>
