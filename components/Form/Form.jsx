@@ -49,38 +49,42 @@ const Form = ({ setResults }) => {
 	};
 
 	return (
-		<Flex mt={15} w="100%" align="center" justifyContent="center">
-			<Box p={2}>
-				<Box my={4}>
-					<form onSubmit={submitHandler}>
-						<FormControl isRequired isInvalid={error}>
-							<FormErrorMessage color="red">{error}</FormErrorMessage>
-							<Textarea
-								borderColor={blackWhite}
-								placeholder="Type in directions."
-								value={directionsInput}
-								onChange={changeHandler}
-								w="container.sm"
-								h="2xs"
-								resize="both"
-							/>
-						</FormControl>
-						<Button
-							bgColor={colorTheme}
-							variant="outline"
-							shadow="base"
-							width="auto"
-							mt={4}
-							type="submit"
-						>
-							{isLoading ? (
-								<CircularProgress isIndeterminate size="24px" color="teal" />
-							) : (
-								"Submit"
-							)}
-						</Button>
-					</form>
-				</Box>
+		<Flex
+			borderWidth="2px"
+			borderColor="purple"
+			mt={15}
+			align="center"
+			justifyContent="center"
+		>
+			<Box borderWidth="2px" borderColor="red" my={4}>
+				<form onSubmit={submitHandler}>
+					<FormControl isRequired isInvalid={error}>
+						<FormErrorMessage color="red">{error}</FormErrorMessage>
+						<Textarea
+							borderColor={blackWhite}
+							placeholder="Type in directions."
+							value={directionsInput}
+							onChange={changeHandler}
+							w="container.sm"
+							h="2xs"
+							resize="both"
+						/>
+					</FormControl>
+					<Button
+						bgColor={colorTheme}
+						variant="outline"
+						shadow="base"
+						width="auto"
+						mt={4}
+						type="submit"
+					>
+						{isLoading ? (
+							<CircularProgress isIndeterminate size="24px" color="teal" />
+						) : (
+							"Submit"
+						)}
+					</Button>
+				</form>
 			</Box>
 		</Flex>
 	);
