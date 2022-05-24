@@ -1,7 +1,7 @@
 import { Box, Grid, GridItem, Flex, useColorModeValue } from "@chakra-ui/react";
 
 const List = ({ results }) => {
-	const colorTheme = useColorModeValue("peachpuff", "#DEB6AB");
+	const colorTheme = useColorModeValue("peachpuff", "#5e60ce");
 
 	return (
 		<Flex maxW="full" align="center" justify="center">
