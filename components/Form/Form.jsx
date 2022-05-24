@@ -49,15 +49,8 @@ const Form = ({ setResults }) => {
 	};
 
 	return (
-		<Flex
-			borderWidth="2px"
-			borderColor="purple"
-			maxW="100%"
-			mt={15}
-			align="center"
-			justifyContent="center"
-		>
-			<Box borderWidth="2px" borderColor="red" my={4}>
+		<Flex maxW="100%" mt={15} align="center" justifyContent="center">
+			<Box maxW="70%" my={4}>
 				<form onSubmit={submitHandler}>
 					<FormControl isRequired isInvalid={error}>
 						<FormErrorMessage color="red">{error}</FormErrorMessage>
@@ -71,20 +64,22 @@ const Form = ({ setResults }) => {
 							resize="both"
 						/>
 					</FormControl>
-					<Button
-						bgColor={colorTheme}
-						variant="outline"
-						shadow="base"
-						width="auto"
-						mt={4}
-						type="submit"
-					>
-						{isLoading ? (
-							<CircularProgress isIndeterminate size="24px" color="teal" />
-						) : (
-							"Submit"
-						)}
-					</Button>
+					<Box display="flex" justifyContent="end">
+						<Button
+							bgColor={colorTheme}
+							variant="outline"
+							shadow="base"
+							width="auto"
+							mt={4}
+							type="submit"
+						>
+							{isLoading ? (
+								<CircularProgress isIndeterminate size="24px" color="teal" />
+							) : (
+								"Submit"
+							)}
+						</Button>
+					</Box>
 				</form>
 			</Box>
 		</Flex>
