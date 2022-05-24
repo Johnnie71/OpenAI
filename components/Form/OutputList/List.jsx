@@ -19,6 +19,7 @@ const List = ({ results }) => {
 
 							return (
 								<Box
+									className="list-item"
 									boxShadow={boxShadowColor}
 									borderRadius="10px"
 									width="100%"
