@@ -1,6 +1,7 @@
 import "../styles/globals.css";
 import { ChakraProvider } from "@chakra-ui/react";
 import theme from "../lib/theme";
+import "@fontsource/roboto-mono";
 
 function MyApp({ Component, pageProps }) {
 	return (
