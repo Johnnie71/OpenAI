@@ -49,8 +49,8 @@ const Form = ({ setResults }) => {
 	};
 
 	return (
-		<Flex maxW="100%" mt={15} align="center" justifyContent="center">
-			<Box maxW="70%" my={4}>
+		<Flex mt={15} align="center" justifyContent="center">
+			<Box my={4}>
 				<form onSubmit={submitHandler}>
 					<FormControl isRequired isInvalid={error}>
 						<FormErrorMessage color="red">{error}</FormErrorMessage>
