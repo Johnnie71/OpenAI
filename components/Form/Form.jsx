@@ -52,6 +52,7 @@ const Form = ({ setResults }) => {
 		<Flex
 			borderWidth="2px"
 			borderColor="purple"
+			maxW="100%"
 			mt={15}
 			align="center"
 			justifyContent="center"
