@@ -36,3 +36,7 @@ a {
 	animation: normal;
 	-webkit-animation: hue 10s infinite linear;
 }
+
+.list-item:hover {
+	box-shadow: 6px 5px 10px grey;
+}
