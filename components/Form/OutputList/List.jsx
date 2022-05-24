@@ -17,8 +17,8 @@ const List = ({ results }) => {
 	const [isMobile] = useMediaQuery("(max-width: 768px)");
 
 	return (
-		<Flex mb={10} maxW="full" align="center" justify="center">
-			<Grid w="50%" autoColumns gap={5}>
+		<Flex mb={10} align="center" justify="center">
+			<Grid w="80%" autoColumns gap={5}>
 				{results.length > 0
 					? results.map((item, idx) => {
 							const { prompt, result } = item;
