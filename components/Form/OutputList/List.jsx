@@ -9,7 +9,7 @@ const List = ({ results }) => {
 	);
 
 	return (
-		<Flex maxW="full" align="center" justify="center">
+		<Flex mb={10} maxW="full" align="center" justify="center">
 			<Grid w="50%" autoColumns gap={5}>
 				{results.length > 0
 					? results.map((item, idx) => {
