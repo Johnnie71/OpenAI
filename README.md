@@ -11,6 +11,7 @@ Created an [AI Form](https://open-ai-git-main-johnnie71.vercel.app/) that on sub
 
 - Saved responses in local storage
 - System theme toggle mode (light / dark)
+- Responsive Design
 
 ## Getting Started
 
