@@ -1,5 +1,5 @@
 import Head from "next/head";
-import AI from "../components/Form/AI/AI";
+import AI from "../components/AI/AI";
 import { ColorModeScript } from "@chakra-ui/react";
 import theme from "../lib/theme";
 
