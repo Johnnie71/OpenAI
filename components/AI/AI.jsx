@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import Form from "../Form";
+import Form from "../Form/Form";
 import List from "../OutputList/List";
 import { Container, Flex, Heading } from "@chakra-ui/react";
 import ThemeToggle from "../ThemeToggler/ThemeToggle";
